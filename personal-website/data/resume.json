@@ -62,9 +62,9 @@
           "Contributing to the SmartThings iOS app, with 10M+ downloads, using Swift, UIKit, SwiftUI, and Combine within an MVVM-C architecture.",
           "Develop the SmartThings watchOS app as the primary owner on the Bangladesh team, using SwiftUI.",
           "Improve architecture and maintainability by reducing duplicate logic, migrating ReactiveSwift to Combine, and transitioning UIKit views to SwiftUI.",
-          "Achieved **90%+ test coverage** for ViewModels and internal state management stores using XCTest.",
-          "Fixed **10+ memory leaks** with Instruments, reducing memory buildup by approximately 23% over repeated use.",
-          "Reduced a performance-critical function from O(N×M) to O(N+M), bringing execution time from approximately 140 ms to under 50 ms. Optimized debug logging from approximately 2 s to 50 ms.",
+          "Achieved 90%+ test coverage for ViewModels and internal state management stores using XCTest.",
+          "Fixed **10+ memory leaks** with Instruments, reducing memory buildup by approximately **23%** over repeated use.",
+          "Reduced a performance-critical function from O(N×M) to O(N+M), bringing execution time from approximately **140 ms to under 50 ms**. Optimized debug logging from approximately 2 s to 50 ms.",
           "Built proofs of concept with WatchKit, HealthKit, WidgetKit, and Core ML, and resolved **150+ bugs**, including critical production issues."
         ],
         "recognition": [
