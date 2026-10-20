@@ -1,0 +1,168 @@
+{
+  "site": {
+    "url": "https://bashem.app/",
+    "description": "Mohammed Bashem, Senior Software Engineer at Samsung R&D Institute Bangladesh. iOS, watchOS, full-stack development, and competitive programming.",
+    "socialDescription": "Building thoughtful software, from iOS and watchOS to the web. Explore my experience, projects, and competitive programming achievements."
+  },
+  "profile": {
+    "name": "Mohammed Bashem",
+    "displayName": "Mohammed\nBashem",
+    "headline": "Software engineer",
+    "location": "Dhaka, Bangladesh",
+    "email": "mohammed.bashem@gmail.com",
+    "phone": "+8801756634774",
+    "phoneLabel": "+880 1756 634774",
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/mbashem" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/bashem/" }
+    ]
+  },
+  "resume": {
+    "path": "assets/resume.pdf",
+    "downloadName": "Mohammed_Bashem_Resume.pdf",
+    "updated": "2026-10-20"
+  },
+  "hero": {
+    "label": "A little about me",
+    "title": "Thoughtful software.",
+    "accent": "From idea to impact.",
+    "intro": "I'm Bashem, a software engineer building mobile experiences and tools for the web. I care about how software feels, how it works, and how it holds up over time.",
+    "specialties": ["iOS", "Full-stack development", "Competitive programming"]
+  },
+  "about": {
+    "navLabel": "About",
+    "label": "About",
+    "title": "Built on curiosity.\nGrounded in engineering.",
+    "paragraphs": [
+      "At Samsung, I contribute to SmartThings on iOS and watchOS app. My work spans architecture, state management, performance, and testing.",
+      "Outside work, I build projects like CFTracker and an interactive React Native chart library. Competitive programming is another part of my practice: breaking down difficult problems and finding a better way through."
+    ],
+    "skills": [
+      { "category": "Mobile", "items": ["Swift", "UIKit", "SwiftUI", "Combine", "XCTest", "React Native"] },
+      { "category": "Web & backend", "items": ["React", "Redux", "Next.js", "Django", "Django REST Framework", "Gin", "HTML", "CSS", "Material UI", "Bootstrap"] },
+      { "category": "Languages", "items": ["Swift", "TypeScript / JavaScript", "C++", "Python", "Go"] },
+      { "category": "Data & tools", "items": ["PostgreSQL", "MongoDB", "Redis", "Docker", "GitHub Actions"] }
+    ]
+  },
+  "experience": {
+    "navLabel": "Experience",
+    "label": "Experience",
+    "title": "Where I've contributed.",
+    "items": [
+      {
+        "company": "Samsung R&D Institute Bangladesh",
+        "url": "",
+        "current": true,
+        "location": "Dhaka, Bangladesh",
+        "roles": [
+          { "title": "Senior Software Engineer", "period": "Jan 2026 — Present" },
+          { "title": "Software Engineer", "period": "Jan 2024 — Dec 2025" }
+        ],
+        "highlights": [
+          "Contributing to the SmartThings iOS app, with 10M+ downloads, using Swift, UIKit, SwiftUI, and Combine within an MVVM-C architecture.",
+          "Develop the SmartThings watchOS app as the primary owner on the Bangladesh team, using SwiftUI.",
+          "Improve architecture and maintainability by reducing duplicate logic, migrating ReactiveSwift to Combine, and transitioning UIKit views to SwiftUI.",
+          "Achieved **90%+ test coverage** for ViewModels and internal state management stores using XCTest.",
+          "Fixed **10+ memory leaks** with Instruments, reducing memory buildup by approximately 23% over repeated use.",
+          "Reduced a performance-critical function from O(N×M) to O(N+M), bringing execution time from approximately 140 ms to under 50 ms. Optimized debug logging from approximately 2 s to 50 ms.",
+          "Built proofs of concept with WatchKit, HealthKit, WidgetKit, and Core ML, and resolved **150+ bugs**, including critical production issues."
+        ],
+        "recognition": [
+          "Icon Award · Jan–Feb 2025",
+          "Code Review Award · Apr–Jun 2025",
+          "Passed Samsung's SWC Professional Test"
+        ],
+        "stack": []
+      },
+      {
+        "company": "Algo Clan Inc.",
+        "url": "https://www.algoclan.com/",
+        "current": false,
+        "location": "Dhaka, Bangladesh",
+        "roles": [{ "title": "Junior Software Developer", "note": "Part time", "period": "May 2023 — Dec 2023" }],
+        "highlights": [
+          "Built the React frontend from scratch for a SaaS product helping Amazon FBA sellers discover products and analyze sales.",
+          "Implemented a queue system to use third-party APIs efficiently.",
+          "Integrated Stripe payments and developed WebSocket and REST APIs."
+        ],
+        "recognition": [],
+        "stack": ["React", "Redux", "Material UI", "Django", "MongoDB", "Redis", "TypeScript", "Python"]
+      }
+    ]
+  },
+  "projects": {
+    "navLabel": "Projects",
+    "label": "Selected projects",
+    "title": "Things I've built.",
+    "description": "Independent projects, from practice tools to interactive interfaces.",
+    "items": [
+      {
+        "name": "CFTracker",
+        "category": "Web application",
+        "period": "2021–present",
+        "paragraphs": [
+          "A Codeforces practice and progress tracking app used by thousands of users, with 40+ GitHub stars as recorded in my October 2026 resume.",
+          "React frontend, a Go and PostgreSQL backend, and a separate Next.js data collection service. GitHub Actions automate storage of API responses to reduce repeated requests."
+        ],
+        "stack": ["React", "TypeScript", "Go", "Gin", "PostgreSQL", "Next.js", "Docker"],
+        "links": [
+          { "label": "Visit website", "url": "https://cftracker.netlify.app/" },
+          { "label": "Source code", "url": "https://github.com/mbashem/cftracker" }
+        ],
+        "artwork": {
+          "type": "tracker",
+          "label": "cftracker / progress",
+          "title": "Practice.\nTrack. Improve.",
+          "caption": "Illustrative progress graphic"
+        }
+      },
+      {
+        "name": "React Native Chart Library",
+        "category": "Mobile library",
+        "period": "",
+        "paragraphs": [
+          "Five interactive chart components with customizable labels, overlays, and tooltips, built using Skia and Reanimated.",
+          "Implemented overscan rendering, gesture-driven panning, custom geometry, and touch selection."
+        ],
+        "stack": ["TypeScript", "React Native", "Skia", "Reanimated"],
+        "links": [{ "label": "Explore source code", "url": "https://github.com/mbashem/rn-charts" }],
+        "artwork": {
+          "type": "chart",
+          "label": "rn-charts / interactions",
+          "title": "Data, with\na sense of touch.",
+          "caption": "Illustrative chart graphic"
+        }
+      }
+    ]
+  },
+  "achievements": {
+    "navLabel": "Problem solving",
+    "label": "Problem solving",
+    "title": "A competitive streak.",
+    "description": "Years of practice, contests, and learning to think a little differently.",
+    "ratingsNote": "Personal-best ratings.",
+    "ratings": [
+      { "platform": "Codeforces", "rating": "1953", "rank": "Candidate Master", "url": "https://codeforces.com/profile/bashem" },
+      { "platform": "AtCoder", "rating": "1743", "rank": "Blue", "url": "https://atcoder.jp/users/bashem" },
+      { "platform": "CodeChef", "rating": "2131", "rank": "5-star", "url": "https://www.codechef.com/users/bashem" },
+      { "platform": "LeetCode", "rating": "2457", "rank": "Guardian", "url": "https://leetcode.com/u/bashem/" }
+    ],
+    "contests": [
+      { "place": "29th", "name": "ICPC Asia West Continent Final", "detail": "2023 · 6,500+ teams", "url": "https://icpc.global/ICPCID/HXPA0LXC4RZV" },
+      { "place": "3rd", "name": "CoU-BRACNet IUPC", "detail": "2023 · 72 teams", "url": "https://toph.co/c/cou-bracnet-inter-university-2023/standings" },
+      { "place": "681st", "name": "Meta Hacker Cup · Round 2", "detail": "2023 · 20,324 initial participants", "url": "" },
+      { "place": "1st", "name": "Intra NSU Programming Contest", "detail": "2023 · 88 participants", "url": "" }
+    ],
+    "links": []
+  },
+  "education": [
+    { "school": "North South University", "degree": "BSc in Computer Science and Engineering", "period": "Jan 2020 — Dec 2023" }
+  ],
+  "contact": {
+    "navLabel": "Contact",
+    "label": "Get in touch",
+    "title": "Let's build",
+    "accent": "something thoughtful.",
+    "description": "Have a project in mind, or want to talk software? I'd love to hear from you."
+  }
+}
