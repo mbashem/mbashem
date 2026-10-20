@@ -101,4 +101,4 @@ Builds generate `.nojekyll` in `public/`, which Next.js copies into `out/`. For 
 
 [Next.js static exports](https://nextjs.org/docs/app/guides/static-exports) · [GitHub Pages setup](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) · [Custom domain setup](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
 
-Content began with the supplied October 20, 2026 resume. Ratings are personal bests, not live statistics. LeetCode's public contest history for `bashem` showed a maximum of 2456.789 at Biweekly Contest 160 (displayed rounded to 2457), and the profile badge was Guardian. [LeetCode profile](https://leetcode.com/u/bashem/).
+Ratings are personal bests, not live statistics. LeetCode's maximum is displayed as 2457, rounded from 2456.789, with the Guardian badge. Update these values in `data/resume.json` when needed.

@@ -101,7 +101,7 @@
         "category": "Web application",
         "period": "2021–present",
         "paragraphs": [
-          "A Codeforces practice and progress tracking app used by thousands of users, with 40+ GitHub stars as recorded in my October 2026 resume.",
+          "A Codeforces practice and progress tracking app used by thousands of users, with 40+ GitHub stars.",
           "React frontend, a Go and PostgreSQL backend, and a separate Next.js data collection service. GitHub Actions automate storage of API responses to reduce repeated requests."
         ],
         "stack": ["React", "TypeScript", "Go", "Gin", "PostgreSQL", "Next.js", "Docker"],

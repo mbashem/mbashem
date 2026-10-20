@@ -11,7 +11,9 @@ export function Sidebar() {
     <header className="sidebar">
       <div className="identity">
         <p className="eyebrow">{profile.headline}</p>
-        <p className="sidebar-name"><RichText>{profile.displayName}</RichText></p>
+        <p className="sidebar-name">
+          <a href="#top" aria-label={`${profile.name}, back to top`}><RichText>{profile.displayName}</RichText></a>
+        </p>
         <p className="location"><span aria-hidden="true">↗</span> {profile.location}</p>
       </div>
       <nav aria-label="Main navigation">
