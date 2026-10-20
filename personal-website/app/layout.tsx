@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { resume, siteUrl } from "@/data/resume";
+import { publicAsset, resume, siteUrl } from "@/data/resume";
 import "./globals.css";
 
 const title = `${resume.profile.name} — ${resume.profile.headline.replace(/\b\w/g, (letter) => letter.toUpperCase())}`;
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title,
   description: resume.site.description,
   alternates: { canonical: siteUrl },
-  icons: { icon: "/assets/favicon.svg" },
+  icons: { icon: publicAsset("assets/favicon.svg") },
   openGraph: {
     type: "website", title, description: resume.site.socialDescription, url: siteUrl,
   },

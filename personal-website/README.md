@@ -31,7 +31,7 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:3000. Editing the JSON, components, or CSS refreshes the development site. Stop the server with Ctrl+C.
+Open http://localhost:3000/mbashem/. The local path follows the pathname in `site.url`. Editing the JSON, components, or CSS refreshes the development site. Restart the development server after changing `site.url`, because Next.js reads `basePath` at startup. Stop the server with Ctrl+C.
 
 From the `personal-website` directory, build and check the production site with:
 
@@ -67,7 +67,9 @@ For a new project, add an object to `projects.items`:
 
 Project `artwork` is optional. Omit it for a text-only entry, or copy an existing object and choose `tracker` or `chart`. Employer and contest `url` fields are optional and may be empty strings. A role's `note` is optional. Empty experience or project arrays hide those sections and adjust navigation numbering. Empty education, awards, highlights, stack, and link arrays are supported.
 
-Contact information is shared from `profile`, so updating an email or social link updates all its appearances. `site.url` drives the canonical URL, social URL, sitemap, robots file, and generated `public/CNAME`. Changing the domain also requires updating GitHub Pages settings and DNS. This configuration assumes a custom domain at its root; a GitHub project URL with a repository path requires configuring Next.js `basePath` and asset URLs.
+Contact information is shared from `profile`, so updating an email or social link updates all its appearances. `site.url` drives Next.js `basePath`, public asset links, the canonical URL, social URL, sitemap, and robots file. The current URL is `https://mbashem.github.io/mbashem/`, so CSS, JavaScript, PDF, and favicon paths include `/mbashem`. A build is required after changing this value.
+
+For a custom domain later, set `site.url` to its root (for example, `https://bashem.app/`), configure that domain in GitHub Pages settings, and configure DNS. The next build automatically switches back to root paths. No DNS changes are needed for the default GitHub URL.
 
 Edit `app/globals.css` for styling and the relevant file in `components/` for layout. `data/schema.ts` reports invalid fields during the build; it also provides the types used by the components. Fix errors before publishing.
 
@@ -76,9 +78,13 @@ Edit `app/globals.css` for styling and the relevant file in `components/` for la
 1. Keep the repository public on GitHub Free, or use a plan supporting Pages from private repositories.
 2. In **Settings → Pages → Build and deployment → Source**, choose **GitHub Actions**.
 3. The workflow at `.github/workflows/pages.yml` installs locked npm dependencies, builds the static export, and checks TypeScript. Pull requests build without deploying. Pushes to `main` and manual workflow runs upload only `personal-website/out/` and deploy it to GitHub Pages.
-4. Verify ownership of `bashem.app` under your account's **Settings → Pages**, using GitHub's TXT record.
-5. In this repository's Pages settings, set the custom domain to `bashem.app` before pointing DNS at GitHub.
-6. Configure the apex (`@`) with these four A records:
+4. To use the default URL, leave **Custom domain** empty. The site is served at `https://mbashem.github.io/mbashem/`.
+
+The following steps are only needed when switching to `bashem.app` later:
+
+5. Set `site.url` to `https://bashem.app/` and verify domain ownership under your account's **Settings → Pages**, using GitHub's TXT record.
+6. In this repository's Pages settings, set the custom domain to `bashem.app` before pointing DNS at GitHub.
+7. Configure the apex (`@`) with these four A records:
 
    ```text
    185.199.108.153
@@ -87,11 +93,11 @@ Edit `app/globals.css` for styling and the relevant file in `components/` for la
    185.199.111.153
    ```
 
-7. Add a `www` CNAME record pointing to `mbashem.github.io`. Preserve existing mail records and avoid wildcard DNS records.
-8. Once GitHub provisions the certificate, enable **Enforce HTTPS** and check both domain variants.
-9. Set the repository and GitHub profile website URLs to `https://bashem.app`.
+8. Add a `www` CNAME record pointing to `mbashem.github.io`. Preserve existing mail records and avoid wildcard DNS records.
+9. Once GitHub provisions the certificate, enable **Enforce HTTPS** and check both domain variants.
+10. Set the repository and GitHub profile website URLs to `https://bashem.app`.
 
-Builds generate `CNAME` and `.nojekyll` in `public/`, which Next.js copies into `out/`. The CNAME file alone does not configure your GitHub custom domain. Local builds do not enable hosting or change DNS.
+Builds generate `.nojekyll` in `public/`, which Next.js copies into `out/`. For a custom hostname, builds also generate `public/CNAME`. For a `github.io` URL, builds remove any stale CNAME file. The CNAME file alone does not configure your GitHub custom domain. Local builds do not enable hosting or change DNS.
 
 [Next.js static exports](https://nextjs.org/docs/app/guides/static-exports) · [GitHub Pages setup](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) · [Custom domain setup](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
 

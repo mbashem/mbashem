@@ -18,12 +18,12 @@ export const resumeSchema = z.object({
     url: webUrl.refine((value) => {
       try {
         const url = new URL(value);
-        return url.protocol === "https:" && url.pathname === "/" &&
+        return url.protocol === "https:" &&
           !url.search && !url.hash && !url.username && !url.password && !url.port;
       } catch {
         return false;
       }
-    }, "Use an HTTPS domain root, such as https://bashem.app/"),
+    }, "Use an HTTPS site URL without credentials, a port, a query, or a fragment"),
     description: z.string(),
     socialDescription: z.string(),
   }),

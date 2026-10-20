@@ -3,6 +3,7 @@ import { resumeSchema } from "./schema";
 
 export const resume = resumeSchema.parse(rawResume);
 export const siteUrl = `${resume.site.url.replace(/\/$/, "")}/`;
+export const basePath = new URL(siteUrl).pathname.replace(/\/$/, "");
 
 export const navigation = [
   { id: "about", label: resume.about.navLabel },
@@ -17,5 +18,5 @@ export function sectionNumber(id: string) {
 }
 
 export function publicAsset(path: string) {
-  return `/${path}`;
+  return `${basePath}/${path}`;
 }
