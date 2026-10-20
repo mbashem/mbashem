@@ -31,7 +31,7 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:3000/mbashem/. The local path follows the pathname in `site.url`. Editing the JSON, components, or CSS refreshes the development site. Restart the development server after changing `site.url`, because Next.js reads `basePath` at startup. Stop the server with Ctrl+C.
+Open http://localhost:3000/. Editing the JSON, components, or CSS refreshes the development site. Stop the server with Ctrl+C.
 
 From the `personal-website` directory, build and check the production site with:
 
@@ -67,9 +67,9 @@ For a new project, add an object to `projects.items`:
 
 Project `artwork` is optional. Omit it for a text-only entry, or copy an existing object and choose `tracker` or `chart`. Employer and contest `url` fields are optional and may be empty strings. A role's `note` is optional. Empty experience or project arrays hide those sections and adjust navigation numbering. Empty education, awards, highlights, stack, and link arrays are supported.
 
-Contact information is shared from `profile`, so updating an email or social link updates all its appearances. `site.url` drives Next.js `basePath`, public asset links, the canonical URL, social URL, sitemap, and robots file. The current URL is `https://mbashem.github.io/mbashem/`, so CSS, JavaScript, PDF, and favicon paths include `/mbashem`. A build is required after changing this value.
+Contact information is shared from `profile`, so updating an email or social link updates all its appearances. CSS, JavaScript, PDF, and favicon links resolve relative to the current page. The same static export works at a domain root or a GitHub Pages repository path without configuring either address for assets. Use the directory URL with a trailing slash, as GitHub Pages normally provides.
 
-For a custom domain later, set `site.url` to its root (for example, `https://bashem.app/`), configure that domain in GitHub Pages settings, and configure DNS. The next build automatically switches back to root paths. No DNS changes are needed for the default GitHub URL.
+`site.url` remains the preferred public address for the canonical URL, social URL, sitemap, robots file, and generated CNAME. Those hosting and search metadata values need an explicit address because static files cannot discover their deployment location at build time. They do not control asset loading. To change the preferred address, update this field, rebuild, and adjust GitHub Pages custom-domain settings separately.
 
 Edit `app/globals.css` for styling and the relevant file in `components/` for layout. `data/schema.ts` reports invalid fields during the build; it also provides the types used by the components. Fix errors before publishing.
 
@@ -78,9 +78,9 @@ Edit `app/globals.css` for styling and the relevant file in `components/` for la
 1. Keep the repository public on GitHub Free, or use a plan supporting Pages from private repositories.
 2. In **Settings → Pages → Build and deployment → Source**, choose **GitHub Actions**.
 3. The workflow at `.github/workflows/pages.yml` installs locked npm dependencies, builds the static export, and checks TypeScript. Pull requests build without deploying. Pushes to `main` and manual workflow runs upload only `personal-website/out/` and deploy it to GitHub Pages.
-4. To use the default URL, leave **Custom domain** empty. The site is served at `https://mbashem.github.io/mbashem/`.
+4. To use the default URL, set `site.url` to `https://mbashem.github.io/mbashem/` and leave **Custom domain** empty.
 
-The following steps are only needed when switching to `bashem.app` later:
+For the currently configured `bashem.app` address:
 
 5. Set `site.url` to `https://bashem.app/` and verify domain ownership under your account's **Settings → Pages**, using GitHub's TXT record.
 6. In this repository's Pages settings, set the custom domain to `bashem.app` before pointing DNS at GitHub.

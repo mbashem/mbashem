@@ -1,4 +1,5 @@
 import { About } from "@/components/about";
+import { BackToTop } from "@/components/back-to-top";
 import { Achievements } from "@/components/achievements";
 import { Contact } from "@/components/contact";
 import { Education } from "@/components/education";
@@ -24,7 +25,7 @@ export default function Home() {
           <Contact />
           <footer>
             <span>© {new Date().getUTCFullYear()} {resume.profile.name}</span>
-            <a href="#top">Back to top ↑</a>
+            <BackToTop>Back to top ↑</BackToTop>
           </footer>
         </main>
       </div>

@@ -1,10 +1,10 @@
 import type { NextConfig } from "next";
-import resume from "./data/resume.json";
 
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
-  basePath: new URL(resume.site.url).pathname.replace(/\/$/, ""),
+  // Resolve exported chunks beside the current page on any static host.
+  assetPrefix: process.env.NODE_ENV === "production" ? "." : undefined,
 };
 
 export default nextConfig;

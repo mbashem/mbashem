@@ -6,7 +6,7 @@ export function Hero() {
   const current = experience.items.find((job) => job.current);
 
   return (
-    <section className="hero" id="top" aria-labelledby="hero-title">
+    <section className="hero" aria-labelledby="hero-title">
       <div className="hero-top">
         <span className="eyebrow">{hero.label}</span>
         <a className="text-link" href={`mailto:${profile.email}`}>Say hello <span aria-hidden="true">↗</span></a>

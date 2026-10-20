@@ -1,5 +1,6 @@
 import { navigation, publicAsset, resume } from "@/data/resume";
 import { RichText, SocialLinks } from "./shared";
+import { BackToTop } from "./back-to-top";
 
 export function Sidebar() {
   const { profile, resume: pdf } = resume;
@@ -12,7 +13,7 @@ export function Sidebar() {
       <div className="identity">
         <p className="eyebrow">{profile.headline}</p>
         <p className="sidebar-name">
-          <a href="#top" aria-label={`${profile.name}, back to top`}><RichText>{profile.displayName}</RichText></a>
+          <BackToTop label={`${profile.name}, back to top`}><RichText>{profile.displayName}</RichText></BackToTop>
         </p>
         <p className="location"><span aria-hidden="true">↗</span> {profile.location}</p>
       </div>
